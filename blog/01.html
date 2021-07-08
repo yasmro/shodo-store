@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5ST9DQ3');</script>
+            <!-- End Google Tag Manager -->
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ST9DQ3"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="header">
+            <div class="brand">
+                <a href="../index.html" class="">Brand</a>
+            </div>
+            <div class="nav">
+                <button class="menu-trigger" id="menuButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-items">
+                    <li class="nav-item"><a href="../profile.html">プロフィール</a></li>
+                    <li class="nav-item"><a href="../works.html">作品</a></li>
+                    <li class="nav-item"><a href="../services.html">サービス内容</a></li>
+                    <li class="nav-item"><a href="../contact.html">お問い合わせ</a></li>
+                    <li class="nav-item"><a href="../blog.html">ブログ</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <div class="title">
+                <span class="en">Blog</span>
+                <span class="ja">ブログ</span>
+            </div>
+            <div class="container">
+                <div class="blog-title">
+                    <h1>ブログタイトル</h1>
+                    <p><time class="post-date">2020.01.01</time><span class="post-category">カテゴリ</span></p>
+                </div>
+                <div class="blog-content">
+
+                </div>
+                <div class="center">
+                    <a href="../blog.html" class="btn btn-primary">Blog トップページへ</a>
+                </div>
+    
+            </div>
+
+        </main>
+
+        
+        <div class="container">
+
+
+            <div class="menu" id="overlayMenu">
+                <div class="menuList">
+                    <h1>MENU</h1>
+                    <h2>S1</h2>
+                    <h2>S2</h2>
+                    <h2>S3</h2>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const menuButton = document.getElementById('menuButton');
+            const overlayMenu = document.getElementById('overlayMenu');
+            
+            menuButton.onclick = () => {
+                menuButton.classList.toggle('active')
+                overlayMenu.classList.toggle('active')
+            }
+
+        </script>
+
+        
+    </body>
+</html>
