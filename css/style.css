@@ -427,6 +427,8 @@ ol li:before {
 .contact-form input,
 .contact-form select,
 .contact-form textarea{
+  -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   border-radius: 0;
   width:100%;
@@ -450,6 +452,16 @@ input:focus, select:focus, textarea:focus{
   outline: 0;
   border: 2px solid var(--primary);
   transition: all 0.2s;
+}
+
+/* blog */
+.blog-title{
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 40px;
+}
+
+.blog-content{
+  margin: 80px 0;
 }
 
 /* Component */
@@ -544,6 +556,7 @@ input:focus, select:focus, textarea:focus{
 
 
 /* menuButton */
+
 .menu-trigger{
   display: none;
 }
@@ -556,7 +569,7 @@ input:focus, select:focus, textarea:focus{
 .menu-trigger {
   position: fixed;
   top: 20px;
-  right: 50px;
+  right: 30px;
 
   width: 50px;
   height: 44px;
@@ -598,7 +611,7 @@ input:focus, select:focus, textarea:focus{
   left: 0;
   bottom: -30px;
   content: 'MENU';
-  display: block;
+  display: inline-block;
   width: 100%;
   color: #000;
   font-size: 16px;
@@ -628,6 +641,7 @@ input:focus, select:focus, textarea:focus{
 
 .menu-trigger.active::after {
   content: 'CLOSE';
+  letter-spacing: 1px;
   bottom: -30px;
 }
 
@@ -661,6 +675,7 @@ input:focus, select:focus, textarea:focus{
   z-index: 1;
 }
 
+
 .menu .menuList{
   opacity: 0;
   transform: translateY(10%);
@@ -674,13 +689,45 @@ input:focus, select:focus, textarea:focus{
   transition-delay: 0.2s;
 }
 
-@media (max-width: 768px) {
+.menu .menuList a{
+  position: relative;
+  color: #fff;overflow: hidden;
+}
+
+.menu .menuList a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  
+  width: 0;
+  /* transform: translateX(-100%); */
+  height: 2px;
+  background: white;
+  
+  transition: all 0.4s;
+}
+
+.menu.active .menuList a:hover::after{
+  width: 100%;
+  transition: all 0.4s;
+}
+
+
+@media (max-width: 767px) {
   .nav-items{
     display: none;
   }
 
-  #menu-trigger{
+  .menu-trigger{
     display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu, .menu.active{
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -888,3 +935,28 @@ input:focus, select:focus, textarea:focus{
 .tab-wrap.carrier{
   box-shadow: none;
 }
+
+.carrier dl {
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+  
+.carrier dt {
+  padding-bottom: 5px;
+  color: var(--primary);
+}
+  
+@media screen and (min-width: 768px) {
+  .carrier dl{
+    display: flex;
+  }
+  /* .carrier dt {
+    clear: left;
+    float: left;
+    width: 10%;
+  }
+  .carrier dd {
+    margin-left: 11%;
+  } */
+}
+
