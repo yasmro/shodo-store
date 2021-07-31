@@ -33,7 +33,7 @@
         <![endif]-->
         <header class="header">
             <div class="brand">
-                <a href="./index.html" class="">Brand</a>
+                <a href="/index.html" class="">Shodo Store</a>
             </div>
             <div class="nav">
                 <button class="menu-trigger" id="menuButton">
@@ -41,12 +41,26 @@
                     <span></span>
                     <span></span>
                 </button>
+                <div class="container">
+                    <div class="menu" id="overlayMenu">
+                        <div class="menuList">
+                            <h1>MENU</h1>
+                            <h2><a href="/profile.html">プロフィール</a></h2>
+                            <h2><a href="/works.html">作品</a></h2>
+                            <h2><a href="/services.html">サービス内容</a></h2>
+                            <h2><a href="/contact.html">お問い合わせ</a></h2>
+                            <h2><a href="/blog.html">ブログ</a></h2>
+                            
+                        </div>
+                    </div>
+                </div>
+                
                 <ul class="nav-items">
-                    <li class="nav-item"><a href="./profile.html">プロフィール</a></li>
-                    <li class="nav-item"><a href="./works.html">作品</a></li>
-                    <li class="nav-item"><a href="./services.html">サービス内容</a></li>
-                    <li class="nav-item"><a href="./contact.html">お問い合わせ</a></li>
-                    <li class="nav-item"><a href="./blog.html">ブログ</a></li>
+                    <li class="nav-item"><a href="/profile.html">プロフィール</a></li>
+                    <li class="nav-item"><a href="/works.html">作品</a></li>
+                    <li class="nav-item"><a href="/services.html">サービス内容</a></li>
+                    <li class="nav-item"><a href="/contact.html">お問い合わせ</a></li>
+                    <li class="nav-item"><a href="/blog.html">ブログ</a></li>
                 </ul>
             </div>
         </header>
@@ -129,30 +143,30 @@
             </div>
 
         </main>
-
-        
-        <div class="container">
-
-
-            <div class="menu" id="overlayMenu">
-                <div class="menuList">
-                    <h1>MENU</h1>
-                    <h2>S1</h2>
-                    <h2>S2</h2>
-                    <h2>S3</h2>
+        <footer>
+            <div class="container flex">
+                <div class="company-logo">
+                    <h1>Shodo Store</h1>
+                    <p>Tel: 1-888-922-2336</p>
                 </div>
+
+                <div class="footer-menu">
+                    <ul class="footer-nav">
+                        <li class="nav-item"><a href="/profile.html">プロフィール</a></li>
+                        <li class="nav-item"><a href="/works.html">作品</a></li>
+                        <li class="nav-item"><a href="/services.html">サービス内容</a></li>
+                        <li class="nav-item"><a href="/contact.html">お問い合わせ</a></li>
+                        <li class="nav-item"><a href="/blog.html">ブログ</a></li>
+                    </ul>                    
+                </div>
+                
             </div>
-        </div>
+            <div class="copyright">
+                <p>© 2021 Shodo store Inc. All rights Reserved.</p>
+            </div>
+        </footer>
 
-        <script src="" async defer></script>
         <script>
-            const details = Array.from(document.getElementsByTagName('details'))
-
-            const switchButton = document.getElementById('switch');
-
-            switchButton.onclick = () => {
-                details.forEach((detail) => detail.open = !detail.open)
-            }
 
             const menuButton = document.getElementById('menuButton');
             const overlayMenu = document.getElementById('overlayMenu');
